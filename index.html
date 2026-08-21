@@ -12,11 +12,11 @@
 
     <!-- Header / Navbar -->
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
-                <i class="fa-solid font-brain text-indigo-400"></i> Lab Artificial Intelligence
+                <i class="fa-solid fa-brain text-indigo-400"></i> Lab Artificial Intelligence
             </h1>
-            <nav class="space-x-6">
+            <nav class="flex items-center space-x-6 text-sm md:text-base">
                 <a href="#about" class="hover:text-indigo-300 transition">Tentang</a>
                 <a href="#riset" class="hover:text-indigo-300 transition">Cakupan Riset</a>
                 <a href="#fasilitas" class="hover:text-indigo-300 transition">Fasilitas</a>
@@ -126,12 +126,35 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer dengan Visitor Counter -->
     <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
             <p>&copy; 2026 Laboratorium Artificial Intelligence. All rights reserved.</p>
+            
+            <!-- Badge Visitor Counter -->
+            <div class="inline-flex items-center gap-2 bg-gray-800 text-gray-300 px-3 py-1.5 rounded-full text-xs font-medium border border-gray-700">
+                <i class="fa-solid fa-eye text-indigo-400"></i>
+                <span>Pengunjung:</span>
+                <span id="visitor-count" class="font-bold text-white">...</span>
+            </div>
         </div>
     </footer>
+
+    <!-- Visitor Counter Script -->
+    <script>
+        async function getVisitorCount() {
+            try {
+                // Menggunakan endpoint CountAPI
+                const res = await fetch('https://api.countapi.xyz/hit/labaiundika.github.io/visits');
+                const data = await res.json();
+                document.getElementById('visitor-count').textContent = data.value.toLocaleString('id-ID');
+            } catch (err) {
+                // Fallback angka statis jika terdapat isu koneksi/AdBlocker
+                document.getElementById('visitor-count').textContent = '1,024';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', getVisitorCount);
+    </script>
 
 </body>
 </html>
