@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membaca Buku Digital - Lab AI</title>
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://cloudflare.com" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans flex flex-col h-screen overflow-hidden">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-indigo-900 text-white px-4 py-3 shadow-md flex justify-between items-center z-10">
+        <div class="flex items-center gap-3">
+            <!-- Tombol Kembali ke Halaman ml.html -->
+            <a href="ml.html" class="text-indigo-200 hover:text-white transition flex items-center gap-2 text-sm bg-indigo-800 px-3 py-1.5 rounded-lg border border-indigo-700">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+            </a>
+            <div class="h-5 w-[1px] bg-indigo-700 hidden sm:block"></div>
+            <!-- Judul Buku Dinamis -->
+            <h1 class="text-sm sm:text-base font-semibold truncate max-w-[200px] sm:max-w-md" id="book-title">
+                Memuat Buku...
+            </h1>
+        </div>
+        
+        <!-- Informasi Format Dokumen -->
+        <span class="text-xs bg-red-600 text-white font-bold px-2.5 py-1 rounded flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-file-pdf"></i> PDF READER
+        </span>
+    </header>
+
+    <!-- Full Screen PDF Frame Container -->
+    <main class="flex-grow bg-gray-800 relative w-full h-full">
+        <!-- Iframe untuk menampilkan dokumen PDF secara langsung -->
+        <iframe 
+            id="pdf-reader" 
+            src="" 
+            class="w-full h-full border-none"
+            allow="fullscreen">
+            Browser Anda tidak mendukung pratinjau PDF. Silakan <a href="#" id="download-fallback" class="text-blue-400 underline">unduh file di sini</a>.
+        </iframe>
+    </main>
+
+    <!-- Script untuk Menangkap Parameter URL -->
+    <script>
+        // Fungsi untuk mengambil parameter dari URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Ambil nama file dan judul buku dari URL
+        const fileParam = getQueryParam('file') || 'buku-ml-dasar.pdf'; 
+        const titleParam = getQueryParam('title') || 'Buku Panduan Machine Learning'; 
+
+        // Terapkan judul ke tab browser dan header halaman
+        document.title = `${titleParam} - Lab AI`;
+        document.getElementById('book-title').innerText = titleParam;
+        
+        // Masukkan file PDF ke dalam iframe
+        const pdfIframe = document.getElementById('pdf-reader');
+        pdfIframe.src = fileParam;
+
+        // Tautan cadangan jika iframe gagal memuat PDF di browser lama
+        document.getElementById('download-fallback').href = fileParam;
+    </script>
+
+</body>
+</html>
