@@ -41,19 +41,20 @@
                 <div class="grid sm:grid-cols-2 gap-4">
                     <!-- Kartu Buku 1 -->
                     <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 transition">
-                        <div>
-                            <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-0.5 rounded">Dasar</span>
-                            <h3 class="font-bold text-gray-900 mt-2 mb-1">Pengantar Machine Learning dengan Python</h3>
-                            <p class="text-gray-600 text-xs line-clamp-2">Belajar algoritma regresi, klasifikasi, dan pembersihan data menggunakan Scikit-Learn.</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-xs text-gray-400"><i class="fa-solid fa-file-pdf"></i> 14.2 MB</span>
-                            <!-- Klik tombol ini untuk mengganti file di PDF Viewer (Kanan) -->
-                            <button onclick="loadPDF('buku-ml-dasar.pdf', 'Pengantar Machine Learning dengan Python')" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3 py-1.5 rounded transition">
-                                Buka di Sini
-                            </button>
-                        </div>
-                    </div>
+    <div>
+        <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2 py-0.5 rounded">Dasar</span>
+        <h3 class="font-bold text-gray-900 mt-2 mb-1">Pengantar Machine Learning dengan Python</h3>
+        <p class="text-gray-600 text-xs line-clamp-2">Belajar algoritma regresi, klasifikasi, dan pembersihan data menggunakan Scikit-Learn.</p>
+    </div>
+    <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+        <span class="text-xs text-gray-400"><i class="fa-solid fa-file-pdf"></i> 14.2 MB</span>
+        <!-- Mengubah tombol menjadi link ke buku1.html dengan membawa data file dan judul -->
+        <a href="buku1.html?file=buku-ml-dasar.pdf&title=Pengantar Machine Learning dengan Python" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3 py-1.5 rounded transition inline-block text-center">
+            Buka Buku
+        </a>
+    </div>
+</div>
+
 
                     <!-- Kartu Buku 2 -->
                     <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 transition">
