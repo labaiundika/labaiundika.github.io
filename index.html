@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Lab AI</title>
+    <title>Lab AI</title>
     <!-- Tailwind CSS CDN untuk styling modern -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -12,16 +12,29 @@
 
     <!-- Header / Navbar -->
     <header class="bg-indigo-900 text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
-                <i class="fa-solid fa-brain text-indigo-400"></i> Lab Artificial Intelligence
-            </h1>
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Bagian Kiri: Logo AI & Judul -->
+            <div class="flex items-center space-x-3">
+                <img src="logo.jpeg" alt="Logo Lab AI" class="h-10 w-auto object-contain rounded bg-white p-1">
+                <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                    Lab Artificial Intelligence
+                </h1>
+            </div>
+
+            <!-- Bagian Tengah: Navigasi Menu -->
             <nav class="flex items-center space-x-6 text-sm md:text-base">
                 <a href="#about" class="hover:text-indigo-300 transition">Tentang</a>
                 <a href="#riset" class="hover:text-indigo-300 transition">Cakupan Riset</a>
                 <a href="#fasilitas" class="hover:text-indigo-300 transition">Fasilitas</a>
                 <a href="#fungsi" class="hover:text-indigo-300 transition">Fungsi</a>
             </nav>
+
+            <!-- Bagian Kanan: Logo Universitas Dinamika -->
+            <div class="flex items-center">
+                <img src="undika.png" alt="Logo Universitas Dinamika" class="h-10 w-auto object-contain rounded bg-white p-1">
+            </div>
+
         </div>
     </header>
 
@@ -43,37 +56,50 @@
             <p class="text-gray-600 mt-2">Bidang fokus penelitian dan pengembangan berbasis data besar serta otomatisasi.</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <a href="mdl.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
-    <div class="text-indigo-600 text-3xl mb-4 group-hover:scale-110 transition-transform duration-200">
-        <i class="fa-solid fa-robot"></i>
-    </div>
-    <h3 class="text-xl font-semibold mb-2 text-gray-900 group-hover:text-indigo-600 transition-colors">
-        Machine & Deep Learning
-    </h3>
-    <p class="text-gray-600 text-sm">
-        Pengembangan algoritma prediktif, pengenalan pola, dan pemodelan data kompleks.
-    </p>
-   </a>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-eye"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Computer Vision</h3>
-                <p class="text-gray-600 text-sm">Pengolahan citra (image processing), pengenalan objek, dan kamera pintar.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-comments"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Natural Language Processing</h3>
-                <p class="text-gray-600 text-sm">Pemrosesan bahasa alami, identifikasi suara, dan analitik teks interaktif.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-database"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Data Science & Big Data</h3>
-                <p class="text-gray-600 text-sm">Analisis prediktif, visualisasi data, dan manajemen informasi skala besar.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-microchip"></i></div>
-                <h3 class="text-xl font-semibold mb-2">AI & Robotics</h3>
-                <p class="text-gray-600 text-sm">Integrasi kecerdasan buatan pada perangkat fisik, sistem otonom, dan IoT.</p>
-            </div>
+   
+            <a href="mdl.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
+                <div class="text-indigo-600 text-3xl mb-4 group-hover:scale-110 transition-transform duration-200">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 group-hover:text-indigo-600 transition-colors">
+                    Machine & Deep Learning
+                </h3>
+                <p class="text-gray-600 text-sm">
+                    Pengembangan algoritma prediktif, pengenalan pola, dan pemodelan data kompleks.
+                </p>
+            </a>
+
+            <a href="md2.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Computer Vision</h3>
+                    <p class="text-gray-600 text-sm">Pengolahan citra (image processing), pengenalan objek, dan kamera pintar.</p>
+                </div>
+            </a>
+
+            <a href="md3.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Natural Language Processing</h3>
+                    <p class="text-gray-600 text-sm">Pemrosesan bahasa alami, identifikasi suara, dan analitik teks interaktif.</p>
+                </div>
+            </a>
+            
+            <a href="md4.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Data Science & Big Data</h3>
+                    <p class="text-gray-600 text-sm">Analisis prediktif, visualisasi data, dan manajemen informasi skala besar.</p>
+                </div>
+            </a>
+            
+            <a href="md5.html" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-400 hover:shadow-md transition group">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">AI & Robotics</h3>
+                    <p class="text-gray-600 text-sm">Integrasi kecerdasan buatan pada perangkat fisik, sistem otonom, dan IoT.</p>
+                </div>
+            </a>
         </div>
     </section>
 
